@@ -1,6 +1,6 @@
 var express = require('express');
 var route_home = require('./routes/home');
-var route_search = require('./routes/search');
+// var route_search = require('./routes/search');
 var path = require('path');
 
 var methodOverride = require('method-override');
@@ -18,7 +18,7 @@ mongoose.connect('mongodb://Adr1:RT4qrYzLVogtUL4qxZFLogZfW4gfdQSL@ds055980.mongo
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'jade');
 app.use(methodOverride());
 app.use(session({ resave: true,
                   saveUninitialized: true,
@@ -34,7 +34,7 @@ app.get('/', function ensureAuthenticated(req, res, next) {
     res.render('home', { title: 'BorderlessFamily' });
 });
 
-app.get('/search', ensureAuthenticated, route_search.search);
+// app.get('/search', ensureAuthenticated, route_search.search);
 
 // error handling middleware should be loaded after the loading the routes
 if ('development' == app.get('env')) {

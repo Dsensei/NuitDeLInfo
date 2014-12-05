@@ -1,0 +1,17 @@
+body {
+  	background: url('/img/index-bg.jpg') no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbarh1 {
+  	text-align: right;
+  	color: #fff;
+  	font-size: 50px;
+}
