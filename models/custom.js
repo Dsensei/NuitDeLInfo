@@ -7,12 +7,16 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var CustomSchema = new Schema({
-  question: {
+  fact: {
     type: String,
     required: true
   },
-  answer : {
-    type: String,
+  answer: {
+    type: Boolean,
+    required: true,
+  },
+  init: {
+    type: Boolean,
     required: true,
   },
   base_user : {type : Schema.Types.ObjectId, ref: 'User'},
