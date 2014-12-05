@@ -15,17 +15,19 @@ html(lang='en')
 
   body
     .navbar.navbar-default.navbar-fixed-top
-        .container
-            .navbar-header
-                a.navbar-brand(href='/') Borderless Family
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-
+      .container
+        .navbar-header
+          a.navbar-brand(href='../') BORDERLESS FAMILY
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
         #navbar-main.navbar-collapse.collapse
-            ul.nav.navbar-nav.navbar-right
-
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/signup') Register
+            li
+              a(href='/login') Login
     .container
        .bs-docs-section.clearfix
             .row

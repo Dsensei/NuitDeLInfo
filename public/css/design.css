@@ -18,11 +18,13 @@ body {
 }
 
 #registerbtn {
-        font-size: 40px;
+        font-size: 30pt;
+        margin-top: 50px;
 }
 
 #homedescription {
         text-align: center;
-        position: fixed;
-        bottom:0;
+        color: #fff;
+        margin-top: 150px;
+        font-size: 20pt;
 }
