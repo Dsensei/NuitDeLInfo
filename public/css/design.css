@@ -8,10 +8,21 @@ body {
 
 .container .jumbotron, .container-fluid .jumbotron {
 	background-color: rgba(255, 255, 255, 0.4);
+        position: relative;
 }
 
 .navbarh1 {
   	text-align: right;
   	color: #fff;
   	font-size: 50px;
+}
+
+#registerbtn {
+        font-size: 40px;
+}
+
+#homedescription {
+        text-align: center;
+        position: fixed;
+        bottom:0;
 }

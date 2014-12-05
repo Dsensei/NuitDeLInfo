@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='KISS KISS')
+    meta(name='keyword', content='')
+    title Borderless Family
+    // Bootstrap core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/bootswatch.min.css', rel='stylesheet')
+
+    link(href='css/design.css', rel='stylesheet')
+
+  body
+    .navbar.navbar-default.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href='/') Borderless Family
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+        #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+
+    .container
+       .bs-docs-section.clearfix
+            .row
+                block content
+
+      script(src='https://code.jquery.com/jquery-1.10.2.min.js')
+      script(src='js/bootstrap.min.js')
