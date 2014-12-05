@@ -30,21 +30,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) { res.redirect('/search'); }
-    res.render('home', { title: 'BorderlessFamily' });
+    res.render('home', { title: 'BorderlessFamily', user: req.user });
 });
 
 app.get('/search', ensureAuthenticated, route_search.search);
 
 app.get('/register', function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) { res.redirect('/search'); }
-    res.render('register', { title: 'BorderlessFamily' });
+    res.render('register', { title: 'BorderlessFamily', user: req.user });
 });
 
-// app.get('/search', ensureAuthenticated, route_search.search);
+app.get('/logout', function(req, res) {
+	req.logout();
+  	res.redirect('/');
+});
 
 // error handling middleware should be loaded after the loading the routes
 if ('development' == app.get('env')) {
-  app.use(errorHandler());
+  	app.use(errorHandler());
 }
 
 function ensureAuthenticated(req, res, next) {
@@ -53,5 +56,5 @@ function ensureAuthenticated(req, res, next) {
 }
 
 app.listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  	console.log('Express server listening on port ' + app.get('port'));
 });

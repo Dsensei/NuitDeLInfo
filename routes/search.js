@@ -3,5 +3,5 @@
  */
 
 exports.search = function(req, res){
-  res.render('search', { title: 'BorderlessFamily' });
+  res.render('search', { title: 'BorderlessFamily', user: req.user });
 };
