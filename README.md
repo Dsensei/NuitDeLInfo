@@ -31,3 +31,5 @@ protected by assymetric encryption so that as soon as the account is created a
 encrypted archive is built, only recoverable by the root server itself.
 The offline mode is interresting since connectivity may be not as stable nor
 aivailable as we are used to.
+
+![Borderless Family](https://raw.githubusercontent.com/Dsensei/NuitDeLInfo/4dfe47b087f0f72b7524c8497c524c5ec52ddea4/wallpaper.jpg)
