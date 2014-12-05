@@ -1,33 +1,37 @@
 extends ./base.jade
 
 block content
-  form.form-horizontal
-    fieldset
-      legend Registration
-      .form-group
-        label.col-lg-2.control-label(for='inputFirst') First Name
-        .col-lg-10
-          input#inputFirst.form-control(type='text', placeholder='First Name')
+  .col-lg-3
+  .col-lg-6
+    .well.bs-component
+      form.form-horizontal
+        fieldset
+          legend Registration
+          .form-group
+            label.col-lg-2.control-label(for='inputFirst') First Name
+            .col-lg-10
+              input#inputFirst.form-control(type='text', placeholder='First Name')
 
-      .form-group
-        label.col-lg-2.control-label(for='inputLast') Last Name
+          .form-group
+            label.col-lg-2.control-label(for='inputLast') Last Name
 
-        .col-lg-10
-          input#inputLast.form-control(type='text', placeholder='Last Name')
+            .col-lg-10
+              input#inputLast.form-control(type='text', placeholder='Last Name')
 
-      .form-group
-        label.col-lg-2.control-label(for='inputEmail') Email
+          .form-group
+            label.col-lg-2.control-label(for='inputEmail') Email
 
-        .col-lg-10
-          input#inputEmail.form-control(type='text', placeholder='Email')
+            .col-lg-10
+              input#inputEmail.form-control(type='text', placeholder='Email')
 
-      .form-group
-        label.col-lg-2.control-label(for='inputPassword') Password
+          .form-group
+            label.col-lg-2.control-label(for='inputPassword') Password
 
-        .col-lg-10
-          input#inputPassword.form-control(type='password', placeholder='Password')
+            .col-lg-10
+              input#inputPassword.form-control(type='password', placeholder='Password')
 
-      .form-group
-        .col-lg-10.col-lg-offset-2
-          button.btn.btn-default Cancel
-          button.btn.btn-primary(type='submit') Submit
+          .form-group
+            .col-lg-10.col-lg-offset-2
+              button.btn.btn-default Cancel
+              button.btn.btn-primary(type='submit') Submit
+    .col-lg-3
