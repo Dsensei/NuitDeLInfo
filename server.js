@@ -1,6 +1,5 @@
 var express = require('express');
-var route_home = require('./routes/home');
-// var route_search = require('./routes/search');
+var route_search = require('./routes/search');
 var path = require('path');
 
 var methodOverride = require('method-override');
@@ -32,6 +31,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) { res.redirect('/search'); }
     res.render('home', { title: 'BorderlessFamily' });
+});
+
+app.get('/search', ensureAuthenticated, route_search.search);
+
+app.get('/register', function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { res.redirect('/search'); }
+    res.render('register', { title: 'BorderlessFamily' });
 });
 
 // app.get('/search', ensureAuthenticated, route_search.search);
